@@ -1,0 +1,6 @@
+För att skapa en react app med typescript som grund:
+npx create-react-app <app-name> --template typescript
+
+
+https://www.youtube.com/watch?v=Z5iWr6Srsj8&t=40s
+Han tipsar om att man ska hoovra mycket i VScode det berättar ofta vilket typ man borde använda

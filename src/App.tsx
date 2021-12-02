@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TextField from './components/TextField';
+import { Counter } from './components/Counter';
 
-function App() {
+/*React.FC is a react functional component.*/
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello world!</h1>
+      <TextField text="kottbullar" person={{firstName: "Gunnar", lastName: "Solskjaer"}}/>
+      <Counter>
+        {(count, setCount) => (
+          <div>
+            {count}
+            <button onClick={() => setCount(count + 1)}>
+              +
+            </button>
+          </div>
+        )}
+      </Counter>
     </div>
   );
+  /*Since we told react what type we will be using for the props. It now complains if we don't insert that prop namely text.*/
 }
 
 export default App;
